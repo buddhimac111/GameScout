@@ -3,21 +3,21 @@ from bs4 import BeautifulSoup
 import re
 import json
 
-# Function to get the data from the Steam store
-def get_steam_data(game_list):
+# Function to get the data from the EPIC store
+def get_epic_data(game_list):
     
     
     # Initialize an empty list to store game data dictionaries.
-    steam_data_array = []
+    epic_data_array = []
 
     # For loop to iterate through each game in the game_list
     for game in game_list:
 
-        # replace the spaces in the game name with a plus sign
-        gameInput = game.replace(" ", "+")
+        # replace the spaces in the game name with a dash sign
+        gameInput = game.replace(" ", "-")
         
-        # Construct the URL to search for a specific game on the Steam store
-        url = 'https://store.steampowered.com/search/?term='+gameInput+'&supportedlang=english&ndl=1'
+        # Construct the URL to search for a specific game on the epic store
+        url = 'https://store.epicgames.com/en-US/p/'+gameInput
 
         # Send an HTTP GET request to the Steam store search URL.
         response = requests.get(url)
@@ -26,7 +26,7 @@ def get_steam_data(game_list):
         soup = BeautifulSoup(response.text, 'html.parser')
 
         # Find the first search result element on the page, identified by its class name.
-        resultRow = soup.find('a', class_='search_result_row ds_collapse_flag')
+        resultRow = soup.find('span', class_='css-1mzagbj')
 
         # assign game details to variables
         gameTitle = resultRow.find('span', class_='title').text
@@ -54,9 +54,9 @@ def get_steam_data(game_list):
         }
 
         # Append the game details to the games_data list
-        steam_data_array.append(singleGameData)
+        epic_data_array.append(singleGameData)
 
     # Convert the games_data list to a JSON string
-    final_steam_json = json.dumps(steam_data_array, indent=4)
+    final_steam_json = json.dumps(epic_data_array, indent=4)
 
     return final_steam_json
