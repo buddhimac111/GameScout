@@ -60,3 +60,4 @@ def get_epic_data(game_list):
     final_steam_json = json.dumps(epic_data_array, indent=4)
 
     return final_steam_json
+ 
