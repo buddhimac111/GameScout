@@ -55,8 +55,5 @@ def get_steam_data(game_list):
 
         # Append the game details to the games_data list
         steam_data_array.append(singleGameData)
-
-    # Convert the games_data list to a JSON string
-    final_steam_json = json.dumps(steam_data_array, indent=4)
-
-    return final_steam_json
+        
+    return steam_data_array
