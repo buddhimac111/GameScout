@@ -1,7 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
 import re
-import json
 
 # Function to get the data from the Steam store
 def get_steam_data(game_list):
@@ -33,6 +32,7 @@ def get_steam_data(game_list):
         # Use regular expression to replace non-alphanumeric characters with an empty string
         cleanedGameTitle = re.sub(r'[^a-zA-Z0-9 ]', '', gameTitle)
 
+        #
         if (resultRow.find('div', class_='discount_original_price')):
             originalPrice = resultRow.find('div', class_='discount_original_price').text
         else:
@@ -55,8 +55,5 @@ def get_steam_data(game_list):
 
         # Append the game details to the games_data list
         steam_data_array.append(singleGameData)
-
-    # Convert the games_data list to a JSON string
-    final_steam_json = json.dumps(steam_data_array, indent=4)
-
-    return final_steam_json
+        
+    return steam_data_array

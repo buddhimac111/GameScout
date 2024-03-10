@@ -1,21 +1,18 @@
 from pymongo import MongoClient
 
-try:
-    # Connect to MongoDB
-    client = MongoClient('mongodb://localhost:27017/')
+def insert_document(collectionName, document):
+    try:
+        # Connect to MongoDB
+        client = MongoClient('mongodb://localhost:27017/')
 
-    # Access the database
-    db = client['gameScout']
+        # Access the database
+        db = client['gameScout']
 
-    # Access the collection
-    collection = db['steam']
+        # Access the collection
+        collection = db[collectionName]
 
-    # Find all documents
-    all_documents = collection.find()
+        # Insert documents
+        collection.insert_many(document)
 
-    # Iterate over the cursor and print each document
-    for document in all_documents:
-        print(document)
-
-except Exception as e:
-    print(f"An error occurred: {e}")
+    except Exception as e:
+        print(f"An error occurred: {e}")
