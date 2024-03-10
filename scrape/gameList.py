@@ -1,2 +1,3 @@
-game_list = ['Alan Wake', 'BioShock Infinite',
-             'Rise of the Tomb Raider', 'Saints Row', 'INSIDE', 'Need for Speed Unbound']
+game_list = ['alan wake', 'bioshock remastered', 'saints row',
+             'inside', 'need for speed unbound', 'blazing sails']
+
