@@ -10,6 +10,7 @@ export const theme = {
   extend: {
     colors: {
       'primeblue': '#0f1924',
+      'adminGrey': '#a1a1a1',
     },
   },
 };
