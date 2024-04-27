@@ -12,12 +12,11 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class EpicGame {
 
     @Id
-    private ObjectId id;
+    private String _id;
     private String title;
     private String original_price;
     private String discount;
     private String final_price;
-    private String rating;
-    private String description;
+    private String epic_rating;
 }
 

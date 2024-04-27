@@ -101,6 +101,15 @@ export default function AddGame() {
             />
           </div>
         </div>
+        {/* submit button */}
+        <div className='mb-10 space-x-3'>
+          <button className='bg-blue-600 text-white py-2 px-4 rounded-md'>
+            Add Game
+          </button>
+          <button className='bg-slate-500 text-white py-2 px-4 rounded-md'>
+            Clear
+          </button>
+        </div>
       </div>
     </main>
   );

@@ -5,5 +5,5 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface EpicGameRepo extends MongoRepository<EpicGame, Object>{
+public interface EpicGameRepo extends MongoRepository<EpicGame, String>{
 }
