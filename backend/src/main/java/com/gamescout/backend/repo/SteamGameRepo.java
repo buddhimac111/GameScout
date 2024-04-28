@@ -5,5 +5,5 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface SteamGameRepo extends MongoRepository<SteamGame, Object>{
+public interface SteamGameRepo extends MongoRepository<SteamGame, String>{
 }

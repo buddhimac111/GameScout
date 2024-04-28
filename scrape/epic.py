@@ -21,6 +21,11 @@ def get_epic_data(game_list):
         # Use regular expression to replace non-alphanumeric characters with an empty string
         cleanedGameTitle = re.sub(r'[^a-zA-Z0-9 ]', '', gameTitle)
 
+        if (S(".css-y2j3ic").exists() ):
+            epicRating = S(".css-y2j3ic").web_element.text
+        else:
+            epicRating = "N/A"
+
         # price related scraping
         if (S(".css-1q7f74q").exists() or S(".css-14repyd").exists() or S(".css-zg96it").exists()):
             originalPrice = S(".css-4jky3p").web_element.text
@@ -34,6 +39,7 @@ def get_epic_data(game_list):
         # Create a dictionary to store the game details
         singleGameData = {
             "title": cleanedGameTitle,
+            "epic_rating": epicRating,
             "original_price": originalPrice,
             "discount": discount,
             "final_price": finalPrice

@@ -12,11 +12,12 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class SteamGame {
 
     @Id
-    private ObjectId id;
+    private String _id;
     private String title;
     private String original_price;
     private String discount;
     private String final_price;
-    private String rating;
-    private String description;
+    private String steam_rating;
+    private String release_date;
+
 }

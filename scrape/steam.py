@@ -32,7 +32,12 @@ def get_steam_data(game_list):
         # Use regular expression to replace non-alphanumeric characters with an empty string
         cleanedGameTitle = re.sub(r'[^a-zA-Z0-9 ]', '', gameTitle)
 
-        #
+        steamRating = resultRow.find('span', class_='search_review_summary').get('data-tooltip-html')
+        
+        releaseDate = resultRow.find('div', class_='search_released').text
+         # Use regular expression to replace non-alphanumeric characters with an empty string
+        cleanedReleaseDate = re.sub(r'[^a-zA-Z0-9 ]', '', releaseDate).strip()
+
         if (resultRow.find('div', class_='discount_original_price')):
             originalPrice = resultRow.find('div', class_='discount_original_price').text
         else:
@@ -48,6 +53,8 @@ def get_steam_data(game_list):
         # Create a dictionary to store the game details
         singleGameData = {
             "title": cleanedGameTitle,
+            "release_date": cleanedReleaseDate,
+            "steam_rating":steamRating,
             "original_price": originalPrice,
             "discount": discount,
             "final_price": finalPrice
