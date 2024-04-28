@@ -1,7 +1,21 @@
 import { Card } from "flowbite-react";
 import Image from "next/image";
 
-export default function CardOne() {
+export default function CardOne({ gameInfo, steamInfo, epicInfo }) {
+
+  const formattedTitle = gameInfo.scrapeTitle.replace(/ /g, '-');
+
+  function truncateDescription(description) {
+    const wordLimit = 10;
+    const words = description.split(" ");
+
+    if (words.length > wordLimit) {
+      return words.slice(0, wordLimit).join(" ") + " ...";
+    }
+
+    return description;
+  }
+
   return (
     <>
       <Card
@@ -10,25 +24,25 @@ export default function CardOne() {
           <Image
             width={500}
             height={500}
-            src='https://cdn2.unrealengine.com/egs-needforspeedunbound-criteriongames-g1a-05-1920x1080-3f4a93f8e7bd.jpg'
-            alt='image 1'
+            src={`${process.env.NEXT_PUBLIC_SERVER_URL}/wallpapers/${gameInfo.wallpaper}`}
+            alt='Game-Card-Image'
           />
         )}
       >
         <h5 className='text-2xl font-bold tracking-tight text-white'>
-          Need for Speed Unbound
+          {gameInfo.title}
         </h5>
         <p className='font-normal text-gray-400 dark:text-gray-400'>
-          Jump straight into the competition in Vol. 6 with a new dedicated PVP
-          mode featuring weekly playlists, ...
+          {truncateDescription(gameInfo.description)}
         </p>
         <p className='font-bold text-white text-xs italic'>
           Action , Racing , Multiplayer
         </p>
 
         <a
-          href='#'
-          className='inline-flex w-full items-center rounded-lg bg-gray-800 px-4 py-2.5 text-white hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700 sm:w-auto'
+          href={`https://store.steampowered.com/search/?term=${gameInfo.scrapeTitle}`}
+          target='_blank'
+          className='justify-between inline-flex w-full items-center rounded-lg bg-gray-800 px-4 py-2.5 text-white hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700 sm:w-auto'
         >
           <Image
             src='/steamLogo.png'
@@ -43,8 +57,9 @@ export default function CardOne() {
           </div>
         </a>
         <a
-          href='#'
-          className='inline-flex w-full items-center rounded-lg bg-gray-800 px-4 py-2.5 text-white hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700 sm:w-auto'
+          href={`https://store.epicgames.com/en-US/p/${formattedTitle}`}
+          target='_blank'
+          className='justify-between inline-flex w-full items-center rounded-lg border-lime-400 border bg-gray-800 px-4 py-2.5 text-white hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-300 sm:w-auto'
         >
           <Image
             src='/epicLogo.png'
@@ -54,17 +69,15 @@ export default function CardOne() {
             height={50}
           />
           <div className='text-left'>
+            <div className='mb-1 text-xs text-lime-400'>-70%</div>
+            <div className='-mt-1 font-sans text-sm font-semibold line-through'>
+              $22.99
+            </div>
+          </div>
+          <div className='text-left'>
             <div className='mb-1 text-xs'>Epic Store</div>
             <div className='-mt-1 font-sans text-sm font-semibold'>$22.99</div>
           </div>
-
-          <Image
-            src='/badge2rec.png'
-            className=''
-            alt='Steam_logo'
-            width={55}
-            height={55}
-          />
         </a>
       </Card>
     </>

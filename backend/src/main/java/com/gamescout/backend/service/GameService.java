@@ -18,6 +18,7 @@ public class GameService {
     private final SteamGameRepo steamGameRepo;
     private final EpicGameRepo epicGameRepo;
     private final GameInfoRepo gameInfoRepo;
+
     public List<SteamGame> getAllSteamGames() {
         return steamGameRepo.findAll();
     }
@@ -26,11 +27,13 @@ public class GameService {
         return epicGameRepo.findAll();
     }
 
+    public List<GameInfo> getAllGameInfo() {
+        return gameInfoRepo.findAll();
+    }
+
     public String addGameInfo(GameInfo gameInfo) {
         return gameInfoRepo.save(gameInfo).get_id();
     }
-
-
 
 
 }

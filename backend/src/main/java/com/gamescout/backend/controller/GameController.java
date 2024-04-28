@@ -35,6 +35,11 @@ public class GameController {
         return gameService.getAllEpicGames();
     }
 
+    @GetMapping("/get-game-info-all")
+    public List<GameInfo> getAllGameInfo() {
+        return gameService.getAllGameInfo();
+    }
+
     @PostMapping(value = "/add-game-info", consumes = "multipart/form-data")
     public ResponseEntity<String> addGameInfo(
             @RequestParam("wallpaper") MultipartFile wallpaper,
