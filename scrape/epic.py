@@ -39,6 +39,7 @@ def get_epic_data(game_list):
         # Create a dictionary to store the game details
         singleGameData = {
             "title": cleanedGameTitle,
+            "scrapeTitle": game,
             "epic_rating": epicRating,
             "original_price": originalPrice,
             "discount": discount,

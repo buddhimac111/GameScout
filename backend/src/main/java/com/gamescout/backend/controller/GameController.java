@@ -35,6 +35,26 @@ public class GameController {
         return gameService.getAllEpicGames();
     }
 
+    @GetMapping("/get-game-info-all")
+    public List<GameInfo> getAllGameInfo() {
+        return gameService.getAllGameInfo();
+    }
+
+    @GetMapping("/get-steam-games-single")
+    public List<SteamGame> getSingleSteamGames(@RequestParam("scrapeTitle") String scrapeTitle) {
+        return gameService.getSingleSteamGames(scrapeTitle);
+    }
+
+    @GetMapping("/get-epic-games-single")
+    public List<EpicGame> getSingleEpicGames(@RequestParam("scrapeTitle") String scrapeTitle) {
+        return gameService.getSingleEpicGames(scrapeTitle);
+    }
+
+    @GetMapping("/get-game-info-single")
+    public List<GameInfo> getSingleGameInfo(@RequestParam("scrapeTitle") String scrapeTitle) {
+        return gameService.getSingleGameInfo(scrapeTitle);
+    }
+
     @PostMapping(value = "/add-game-info", consumes = "multipart/form-data")
     public ResponseEntity<String> addGameInfo(
             @RequestParam("wallpaper") MultipartFile wallpaper,
@@ -61,4 +81,6 @@ public class GameController {
 
         return ResponseEntity.ok(gameService.addGameInfo(gameInfo));
     }
+
+
 }

@@ -9,24 +9,31 @@ import {
 
 export default function FooterSection() {
   return (
-    <Footer container className="bg-primeblue mt-16">
+    <Footer container className='bg-primeblue mt-16 mb-4 px-24'>
       <div className='w-full text-center'>
+        <FooterDivider />
         <div className='w-full justify-between sm:flex sm:items-center sm:justify-between'>
-          <FooterBrand
-            href='/'
-            src='/logoGameScout.png'
-            alt='GameScout Logo'
-            name='GameScout'
+          <div className='flex'>
+            <FooterBrand
+              href='/'
+              src='/logoGameScout.png'
+              alt='GameScout Logo'
+            />
+            <p className='text-2xl font-semibold text-adminGrey'>GameScout</p>
+          </div>
+
+          <FooterCopyright
+            href='#'
+            by='GameScout All rights reserved'
+            year={2024}
+            className="text-adminGrey"
           />
-          <FooterLinkGroup>
-            <FooterLink href='#'>About</FooterLink>
-            <FooterLink href='#'>Privacy Policy</FooterLink>
-            <FooterLink href='#'>Licensing</FooterLink>
-            <FooterLink href='#'>Contact</FooterLink>
+          <FooterLinkGroup className="text-adminGrey">
+            <FooterLink href='/'>Home</FooterLink>
+            <FooterLink href='#'>About us</FooterLink>
+            <FooterLink href='#'>Contact us</FooterLink>
           </FooterLinkGroup>
         </div>
-        <FooterDivider />
-        <FooterCopyright href='#' by='BUDDHIMA All rights reserved' year={2024} />
       </div>
     </Footer>
   );

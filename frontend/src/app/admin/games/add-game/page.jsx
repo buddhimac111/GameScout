@@ -218,6 +218,14 @@ export default function AddGame() {
                 <Checkbox id='racing' name='genres' value='racing' onChange={handleChange} />
                 <Label htmlFor='racing' className='flex text-adminGrey'>Racing</Label>
               </div>
+              <div className='flex items-center gap-2'>
+                <Checkbox id='horror' name='genres' value='horror' onChange={handleChange} />
+                <Label htmlFor='horror' className='flex text-adminGrey'>Horror</Label>
+              </div>
+              <div className='flex items-center gap-2'>
+                <Checkbox id='shooter' name='genres' value='shooter' onChange={handleChange} />
+                <Label htmlFor='shooter' className='flex text-adminGrey'>Shooter</Label>
+              </div>
               
             </div>
         

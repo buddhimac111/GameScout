@@ -53,6 +53,7 @@ def get_steam_data(game_list):
         # Create a dictionary to store the game details
         singleGameData = {
             "title": cleanedGameTitle,
+            "scrapeTitle": game,
             "release_date": cleanedReleaseDate,
             "steam_rating":steamRating,
             "original_price": originalPrice,

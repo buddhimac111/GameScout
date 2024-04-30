@@ -11,6 +11,7 @@ export const theme = {
     colors: {
       'primeblue': '#0f1924',
       'adminGrey': '#a1a1a1',
+      'hoverBlue': '#070e18',
     },
   },
 };

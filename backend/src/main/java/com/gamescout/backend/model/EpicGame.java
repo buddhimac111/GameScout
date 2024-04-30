@@ -14,6 +14,7 @@ public class EpicGame {
     @Id
     private String _id;
     private String title;
+    private String scrapeTitle;
     private String original_price;
     private String discount;
     private String final_price;
