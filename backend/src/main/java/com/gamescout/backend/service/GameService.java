@@ -31,6 +31,18 @@ public class GameService {
         return gameInfoRepo.findAll();
     }
 
+    public List<SteamGame> getSingleSteamGames(String scrapeTitle) {
+        return steamGameRepo.findByScrapeTitle(scrapeTitle);
+    }
+
+    public List<EpicGame> getSingleEpicGames(String scrapeTitle) {
+        return epicGameRepo.findByScrapeTitle(scrapeTitle);
+    }
+
+    public List<GameInfo> getSingleGameInfo(String scrapeTitle) {
+        return gameInfoRepo.findByScrapeTitle(scrapeTitle);
+    }
+
     public String addGameInfo(GameInfo gameInfo) {
         return gameInfoRepo.save(gameInfo).get_id();
     }
