@@ -85,7 +85,7 @@ export default async function ViewGame({ params }) {
           </div>
         </div>
         <div className='flex space-x-10 pt-10'>
-          <div
+          <a href={`https://store.steampowered.com/search/?term=${cleanSlug}`} target="_blank"
             className={`border-2 w-[50%] rounded-lg flex pl-8 hover:cursor-pointer hover:bg-hoverBlue h-40
            ${
              checkBorder(
@@ -135,8 +135,8 @@ export default async function ViewGame({ params }) {
                 </span>
               </div>
             </div>
-          </div>
-          <div
+          </a>
+          <a href={`https://store.epicgames.com/en-US/p/${cleanSlug.replace(/ /g, "-")}`} target="_blank"
             className={`border-2 w-[50%] rounded-lg flex pl-8 hover:cursor-pointer hover:bg-hoverBlue h-40
            ${
              checkBorder(
@@ -187,7 +187,7 @@ export default async function ViewGame({ params }) {
                 </span>
               </div>
             </div>
-          </div>
+          </a>
         </div>
       </div>
     </main>
