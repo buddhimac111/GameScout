@@ -1,6 +1,5 @@
 package com.gamescout.backend.service;
 
-
 import com.gamescout.backend.model.User;
 import com.gamescout.backend.repo.UserRepo;
 import lombok.RequiredArgsConstructor;
