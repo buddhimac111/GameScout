@@ -1,40 +1,68 @@
-import NavBar from "@/app/components/NavBar";
-import Image from "next/image";
+"use client";
+
+import NavBar from "@/app/components/NavBar";;
+import axios from "axios";
+import Swal from "sweetalert2";
+import iziToast from "izitoast";
+import "izitoast/dist/css/iziToast.min.css";
 
 export default function Recommendations() {
+  const handleSubmit = async (event) => {
+    event.preventDefault(); // Prevent the default form submit behavior
+
+    const formData = {
+      firstName: event.target.fname.value,
+      lastName: event.target.lname.value,
+      email: event.target.email.value,
+      password: event.target.password.value,
+      confirmPassword: event.target["confirm-password"].value,
+      termsAndConditions: event.target.terms.checked,
+    };
+
+    let response;
+
+    try {
+      response = await axios.post(
+        `${process.env.NEXT_PUBLIC_API_URL}/users/add-user`,
+        formData
+      );
+
+      Swal.fire({
+        title: "Success!",
+        text: "User registered successfully!",
+        icon: "success",
+      });
+    } catch (error) {
+      iziToast.error({
+        title: "Error",
+        message: error.response.data,
+      });
+    }
+  };
+
   return (
     <main>
       <NavBar />
-
       <section
         className='bg-cover bg-center min-h-screen'
         style={{ backgroundImage: "url('/background.jpg')" }}
       >
-        <div class='flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0'>
-          <a
-            href='#'
-            class='flex items-center mb-6 text-2xl font-semibold text-white'
-          >
-            <Image
-              class='w-8 h-8 mr-2'
-              src='/logoGameScout.png'
-              alt='Logo'
-              width={100}
-              height={100}
-            />
-            GameScout
-          </a>
-          <div class='w-full rounded-lg shadow border md:mt-0 sm:max-w-md xl:p-0 bg-gray-800 border-gray-700'>
-            <div class='p-6 space-y-4 md:space-y-6 sm:p-8'>
-              <h1 class='text-xl font-bold leading-tight tracking-tight md:text-2xl text-white text-center'>
+        <div className='flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:pt-24'>
+          <div className='w-full rounded-lg shadow border md:mt-0 sm:max-w-md xl:p-0 bg-gray-800 border-gray-700'>
+            <div className='p-6 space-y-4 md:space-y-6 sm:p-8'>
+              <h1 className='text-xl font-bold leading-tight tracking-tight md:text-2xl text-white text-center'>
                 Register
               </h1>
-              <form class='space-y-4 md:space-y-6' action='#'>
-                <div className="flex space-x-3">
+              <form
+                className='space-y-4 md:space-y-6'
+                action='#'
+                onSubmit={handleSubmit}
+              >
+                <div className='flex space-x-3'>
                   <div>
                     <label
-                      for='fname'
-                      class='block mb-2 text-sm font-medium text-white'
+                      htmlFor='fname'
+                      className='block mb-2 text-sm font-medium text-white'
                     >
                       First Name
                     </label>
@@ -42,15 +70,15 @@ export default function Recommendations() {
                       type='fname'
                       name='fname'
                       id='fname'
-                      class='border sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500'
+                      className='border sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500'
                       placeholder='John'
-                      required=''
+                      required
                     />
                   </div>
                   <div>
                     <label
-                      for='lname'
-                      class='block mb-2 text-sm font-medium text-white'
+                      htmlFor='lname'
+                      className='block mb-2 text-sm font-medium text-white'
                     >
                       Last Name
                     </label>
@@ -58,16 +86,16 @@ export default function Recommendations() {
                       type='lname'
                       name='lname'
                       id='lname'
-                      class='border sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500'
+                      className='border sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500'
                       placeholder='Doe'
-                      required=''
+                      required
                     />
                   </div>
                 </div>
                 <div>
                   <label
-                    for='email'
-                    class='block mb-2 text-sm font-medium text-white'
+                    htmlFor='email'
+                    className='block mb-2 text-sm font-medium text-white'
                   >
                     Email
                   </label>
@@ -75,15 +103,15 @@ export default function Recommendations() {
                     type='email'
                     name='email'
                     id='email'
-                    class='border sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500'
+                    className='border sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500'
                     placeholder='name@company.com'
-                    required=''
+                    required
                   />
                 </div>
                 <div>
                   <label
-                    for='password'
-                    class='block mb-2 text-sm font-medium text-white'
+                    htmlFor='password'
+                    className='block mb-2 text-sm font-medium text-white'
                   >
                     Password
                   </label>
@@ -92,42 +120,45 @@ export default function Recommendations() {
                     name='password'
                     id='password'
                     placeholder='••••••••'
-                    class='border sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500'
-                    required=''
+                    className='border sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500'
+                    required
                   />
                 </div>
                 <div>
                   <label
-                    for='confirm-password'
-                    class='block mb-2 text-sm font-medium text-white'
+                    htmlFor='confirm-password'
+                    className='block mb-2 text-sm font-medium text-white'
                   >
                     Confirm Password
                   </label>
                   <input
-                    type='confirm-password'
+                    type='password'
                     name='confirm-password'
                     id='confirm-password'
                     placeholder='••••••••'
-                    class='border sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500'
-                    required=''
+                    className='border sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500'
+                    required
                   />
                 </div>
-                <div class='flex items-center justify-between'>
-                  <div class='flex items-start'>
-                    <div class='flex items-center h-5'>
+                <div className='flex items-center justify-between'>
+                  <div className='flex items-start'>
+                    <div className='flex items-center h-5'>
                       <input
                         id='terms'
                         aria-describedby='terms'
                         type='checkbox'
-                        class='w-4 h-4 border rounded focus:ring-3 focus:ring-primary-300 bg-gray-700 border-gray-600 focus:ring-primary-600 ring-offset-gray-800'
-                        required=''
+                        className='w-4 h-4 border rounded focus:ring-3 focus:ring-primary-300 bg-gray-700 border-gray-600 focus:ring-primary-600 ring-offset-gray-800'
+                        required
                       />
                     </div>
-                    <div class='ml-3 text-sm'>
-                      <label for='terms' class='font-light text-gray-300'>
+                    <div className='ml-3 text-sm'>
+                      <label
+                        htmlFor='terms'
+                        className='font-light text-gray-300'
+                      >
                         I accept the{" "}
                         <a
-                          class='font-medium hover:underline text-primary-500'
+                          className='font-medium hover:underline text-primary-500'
                           href='#'
                         >
                           Terms and Conditions
@@ -137,22 +168,22 @@ export default function Recommendations() {
                   </div>
                   {/* <a
                     href='#'
-                    class='text-sm font-medium text-primary-600 hover:underline text-primary-500'
+                    className='text-sm font-medium text-primary-600 hover:underline text-primary-500'
                   >
                     Forgot password?
                   </a> */}
                 </div>
                 <button
                   type='submit'
-                  class='w-full text-white bg-[#6875f5] hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center bg-primary-600 hover:bg-primary-700 focus:ring-primary-800'
+                  className='w-full text-white bg-[#6875f5] hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center bg-primary-600 hover:bg-primary-700 focus:ring-primary-800'
                 >
                   Register
                 </button>
-                <p class='text-sm font-light text-gray-400'>
+                <p className='text-sm font-light text-gray-400'>
                   Alredy have an account?{" "}
                   <a
                     href='#'
-                    class='font-medium text-[#6875f5] hover:underline text-primary-500'
+                    className='font-medium text-[#6875f5] hover:underline text-primary-500'
                   >
                     Sign in
                   </a>
