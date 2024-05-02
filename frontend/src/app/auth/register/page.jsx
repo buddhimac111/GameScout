@@ -3,10 +3,11 @@
 import NavBar from "@/app/components/NavBar";;
 import axios from "axios";
 import Swal from "sweetalert2";
+import Link from "next/link";
 import iziToast from "izitoast";
 import "izitoast/dist/css/iziToast.min.css";
 
-export default function Recommendations() {
+export default function Register() {
   const handleSubmit = async (event) => {
     event.preventDefault(); // Prevent the default form submit behavior
 
@@ -31,7 +32,12 @@ export default function Recommendations() {
         title: "Success!",
         text: "User registered successfully!",
         icon: "success",
+      }).then((result) => {
+        if (result.value) {
+          window.location.href = "/auth/sign-in"; 
+        }
       });
+
     } catch (error) {
       iziToast.error({
         title: "Error",
@@ -181,12 +187,12 @@ export default function Recommendations() {
                 </button>
                 <p className='text-sm font-light text-gray-400'>
                   Alredy have an account?{" "}
-                  <a
-                    href='#'
+                  <Link
+                    href='/auth/sign-in'
                     className='font-medium text-[#6875f5] hover:underline text-primary-500'
                   >
                     Sign in
-                  </a>
+                  </Link>
                 </p>
               </form>
             </div>

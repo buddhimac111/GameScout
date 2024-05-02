@@ -7,6 +7,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.security.NoSuchAlgorithmException;
+import java.util.List;
 
 @RestController
 @RequestMapping("api/users")
@@ -18,9 +19,13 @@ public class UserController {
 
     @PostMapping("/add-user")
     public ResponseEntity<String> addUser(@RequestBody User user) throws NoSuchAlgorithmException {
-
         return userService.addUser(user);
-
     }
+
+    @PostMapping("/log-user")
+    public String getUser(@RequestBody User user) throws NoSuchAlgorithmException {
+        return userService.logUser(user);
+    }
+
 
 }
