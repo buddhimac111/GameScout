@@ -154,12 +154,14 @@ export default function NavBar() {
                     {/* Profile dropdown */}
                     <Menu as='div' className='relative ml-4 flex-shrink-0'>
                       <div>
-                        <Menu.Button className='flex rounded-full bg-white text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2'>
+                        <Menu.Button>
                           <span className='sr-only'>Open user menu</span>
-                          <img
-                            className='h-8 w-8 rounded-full'
-                            src='https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80'
-                            alt=''
+                          <Image
+                            className='rounded-full border-slate-400 border-2 hover:border-indigo-500 cursor-pointer hover:border-4'
+                            width={42}
+                            height={42}
+                            src={`${process.env.NEXT_PUBLIC_SERVER_URL}/profiles/defaultProfile001.png`}
+                            alt='profile-avatar'
                           />
                         </Menu.Button>
                       </div>
@@ -175,15 +177,15 @@ export default function NavBar() {
                         <Menu.Items className='absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none'>
                           <Menu.Item>
                             {({ active }) => (
-                              <a
-                                href='#'
+                              <Link
+                                href={`/profile/${token.split("-")[0]}`}
                                 className={classNames(
                                   active ? "bg-gray-100" : "",
                                   "block px-4 py-2 text-sm text-gray-700"
                                 )}
                               >
                                 View Profile
-                              </a>
+                              </Link>
                             )}
                           </Menu.Item>
                           <Menu.Item>

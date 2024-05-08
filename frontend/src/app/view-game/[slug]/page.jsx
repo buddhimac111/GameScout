@@ -37,7 +37,6 @@ export default async function ViewGame({ params }) {
   } catch (error) {
     console.log(error);
   }
-  console.log(gameInfo.data[0].title);
 
   return (
     <main>
