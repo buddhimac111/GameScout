@@ -5,6 +5,7 @@ import Link from "next/link";
 import axios from "axios";
 import iziToast from "izitoast";
 import "izitoast/dist/css/iziToast.min.css";
+import Cookies from 'js-cookie';
 
 export default function SignIn() {
   const handleSubmit = async (event) => {
@@ -22,7 +23,6 @@ export default function SignIn() {
         `${process.env.NEXT_PUBLIC_API_URL}/users/log-user`,
         formData
       );
-
       if (response.data === "invalid-email") {
         iziToast.error({
           title: "Error",
@@ -34,7 +34,8 @@ export default function SignIn() {
           message: "Invalid password",
         });
       } else {
-        window.location.href = "/";
+        Cookies.set('token', response.data, { expires: 7 });
+        window.location.href = "/"; 
       }
     } catch (error) {
       iziToast.error({

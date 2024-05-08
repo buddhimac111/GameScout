@@ -37,14 +37,14 @@ public class UserService {
 
     public String logUser(User user) throws NoSuchAlgorithmException {
 
-        List<User> Response =  userRepo.findByEmail(user.getEmail());
+        List<User> Response = userRepo.findByEmail(user.getEmail());
 
         if (Response.isEmpty()) {
             return "invalid-email";
         }
 
         if ((Response.get(0).getPassword()).equals(encryptService.encrypt(user.getPassword()))) {
-            return Response.get(0).get_id();
+            return Response.get(0).get_id() + "-" + Response.get(0).isAdmin();
         }
 
         return "invalid-password";
