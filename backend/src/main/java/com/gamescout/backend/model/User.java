@@ -19,6 +19,8 @@ public class User {
     private String password;
     private String confirmPassword;
     private boolean termsAndConditions;
+    private String profilePicture;
+    private String joinDate;
     @Builder.Default
     private boolean isAdmin = false;
 

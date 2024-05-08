@@ -27,5 +27,13 @@ public class UserController {
         return userService.logUser(user);
     }
 
+    @GetMapping("/get-single-user")
+    public List<User> getSingleUser(@RequestParam("UserId") String UserId) {
+        return userService.getSingleUser(UserId);
+    }
 
+    @DeleteMapping("/delete-user")
+    public void deleteUser(@RequestParam("UserId") String UserId) {
+        userService.deleteUser(UserId);
+    }
 }

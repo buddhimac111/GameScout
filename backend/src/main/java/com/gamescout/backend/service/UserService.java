@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.security.NoSuchAlgorithmException;
+import java.time.LocalDate;
 import java.util.List;
 
 @Service
@@ -29,6 +30,9 @@ public class UserService {
         user.setPassword(encryptService.encrypt(user.getPassword()));
         user.setConfirmPassword(encryptService.encrypt(user.getConfirmPassword()));
 
+        user.setProfilePicture("defaultProfile001.png");
+        user.setJoinDate(LocalDate.now().toString());
+
         userRepo.save(user);
 
         return ResponseEntity.ok("User added");
@@ -44,10 +48,19 @@ public class UserService {
         }
 
         if ((Response.get(0).getPassword()).equals(encryptService.encrypt(user.getPassword()))) {
-            return Response.get(0).get_id() + "-" + Response.get(0).isAdmin();
+            return Response.get(0).get_id() + "-" + Response.get(0).isAdmin() + "-" + Response.get(0).getProfilePicture();
         }
 
         return "invalid-password";
 
     }
+
+    public List<User> getSingleUser(String UserId) {
+        return userRepo.findBy_id(UserId);
+    }
+
+    public void deleteUser(String UserId) {
+        userRepo.deleteById(UserId);
+    }
+
 }
