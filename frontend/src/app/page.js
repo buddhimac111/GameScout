@@ -1,4 +1,3 @@
-import CardOne from "./components/CardOne";
 import CardSet from "./components/CardSet";
 import CarouselHome from "./components/Carousel";
 import FooterSection, { Footer } from "./components/Footer";

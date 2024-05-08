@@ -4,6 +4,7 @@ export default function Recommendations() {
   return (
     <main>
       <NavBar />
+      
   
    
     </main>
