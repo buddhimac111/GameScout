@@ -55,6 +55,11 @@ public class GameController {
         return gameService.getSingleGameInfo(scrapeTitle);
     }
 
+    @GetMapping("/search-games")
+    public List<GameInfo> searchGames(@RequestParam("searchTerm") String searchTerm) {
+        return gameService.searchGames(searchTerm);
+    }
+
     @PostMapping(value = "/add-game-info", consumes = "multipart/form-data")
     public ResponseEntity<String> addGameInfo(
             @RequestParam("wallpaper") MultipartFile wallpaper,

@@ -7,6 +7,8 @@ import com.gamescout.backend.repo.EpicGameRepo;
 import com.gamescout.backend.repo.GameInfoRepo;
 import com.gamescout.backend.repo.SteamGameRepo;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -41,6 +43,12 @@ public class GameService {
 
     public List<GameInfo> getSingleGameInfo(String scrapeTitle) {
         return gameInfoRepo.findByScrapeTitle(scrapeTitle);
+    }
+
+    public List<GameInfo> searchGames(String searchTerm) {
+        PageRequest pageRequest = PageRequest.of(0, 5);
+        Page<GameInfo> page = gameInfoRepo.findByTitleContainingIgnoreCase(searchTerm, pageRequest);
+        return page.getContent();
     }
 
     public String addGameInfo(GameInfo gameInfo) {
