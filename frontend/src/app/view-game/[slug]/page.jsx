@@ -1,6 +1,7 @@
 import Image from "next/image";
 import axios from "axios";
 import NavBar from "../../components/NavBar";
+import MetaRecoder from "@/app/components/MetaRecoder";
 
 export default async function ViewGame({ params }) {
   const { slug } = params;
@@ -25,6 +26,15 @@ export default async function ViewGame({ params }) {
   let epicInfo;
 
   try {
+    // //save a meta record
+    // const meta = await axios.post(
+    //   `${process.env.NEXT_PUBLIC_API_URL}/meta/save-meta`,
+    //   {
+    //     title: cleanSlug,
+    //     description: "View Game",
+    //     url: `/view-game/${slug}`,
+    //   }
+    // );
     gameInfo = await axios.get(
       `${process.env.NEXT_PUBLIC_API_URL}/scraped-games/get-game-info-single?scrapeTitle=${cleanSlug}`
     );
@@ -41,7 +51,7 @@ export default async function ViewGame({ params }) {
   return (
     <main>
       <NavBar />
-
+      <MetaRecoder slug={cleanSlug} description="view-game" steamPrice={steamInfo.data[0].final_price} epicPrice={epicInfo.data[0].final_price}/>
       <div className='pt-32 px-36'>
         <div className='flex'>
           <Image
@@ -84,7 +94,9 @@ export default async function ViewGame({ params }) {
           </div>
         </div>
         <div className='flex space-x-10 pt-10'>
-          <a href={`https://store.steampowered.com/search/?term=${cleanSlug}`} target="_blank"
+          <a
+            href={`https://store.steampowered.com/search/?term=${cleanSlug}`}
+            target='_blank'
             className={`border-2 w-[50%] rounded-lg flex pl-8 hover:cursor-pointer hover:bg-hoverBlue h-40
            ${
              checkBorder(
@@ -135,7 +147,12 @@ export default async function ViewGame({ params }) {
               </div>
             </div>
           </a>
-          <a href={`https://store.epicgames.com/en-US/p/${cleanSlug.replace(/ /g, "-")}`} target="_blank"
+          <a
+            href={`https://store.epicgames.com/en-US/p/${cleanSlug.replace(
+              / /g,
+              "-"
+            )}`}
+            target='_blank'
             className={`border-2 w-[50%] rounded-lg flex pl-8 hover:cursor-pointer hover:bg-hoverBlue h-40
            ${
              checkBorder(
