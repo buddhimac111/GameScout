@@ -12,4 +12,7 @@ import java.util.List;
 public interface GameInfoRepo extends MongoRepository <GameInfo, String> {
     List<GameInfo> findByScrapeTitle(String scrapeTitle);
     Page<GameInfo> findByTitleContainingIgnoreCase(String searchTerm, Pageable pageable);
+    List<GameInfo> findAllByGenresContainingIgnoreCase(List<String> genres);
+
+    List<GameInfo> findAllByScrapeTitleIn(List<String> recommendedGames);
 }
