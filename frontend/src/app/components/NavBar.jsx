@@ -87,9 +87,9 @@ export default function NavBar() {
                   </Link>
                   {token && ready ? (
                   <Link
-                    href='/recommendations'
+                    href={`/recommendations/${token.split("-")[0]}`}
                     className={
-                      pathName === "/recommendations"
+                      pathName.startsWith('/recommendations/')
                         ? activeClass
                         : inActiveClass
                     }
