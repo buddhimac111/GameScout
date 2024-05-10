@@ -26,15 +26,6 @@ export default async function ViewGame({ params }) {
   let epicInfo;
 
   try {
-    // //save a meta record
-    // const meta = await axios.post(
-    //   `${process.env.NEXT_PUBLIC_API_URL}/meta/save-meta`,
-    //   {
-    //     title: cleanSlug,
-    //     description: "View Game",
-    //     url: `/view-game/${slug}`,
-    //   }
-    // );
     gameInfo = await axios.get(
       `${process.env.NEXT_PUBLIC_API_URL}/scraped-games/get-game-info-single?scrapeTitle=${cleanSlug}`
     );
