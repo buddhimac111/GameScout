@@ -2,7 +2,7 @@ import NavBar from "@/app/components/NavBar";
 import Image from "next/image";
 import { FaTrashAlt } from "react-icons/fa";
 import axios from "axios";
-import DeleteUserBtn from "@/app/components/deleteUserBtn";
+import DeleteUserBtn from "@/app/components/DeleteUserBtn";
 
 export default async function Profile({ params }) {
 
