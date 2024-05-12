@@ -1,0 +1,60 @@
+[{
+  "_id": {
+    "$oid": "663bab2206353d306c799982"
+  },
+  "firstName": "Admin",
+  "lastName": "#001",
+  "email": "admin@gmail.com",
+  "password": "FeKw08M4keuw8e9gnsQZQgwg4yDOlMZfvIwzEkSOsiU=",
+  "confirmPassword": "FeKw08M4keuw8e9gnsQZQgwg4yDOlMZfvIwzEkSOsiU=",
+  "termsAndConditions": true,
+  "profilePicture": "defaultProfile001.png",
+  "isAdmin": true,
+  "_class": "com.gamescout.backend.model.User",
+  "joinDate": "2024-05-09"
+},
+{
+  "_id": {
+    "$oid": "663bc86c916c212f714b328b"
+  },
+  "firstName": "John",
+  "lastName": "Doe",
+  "email": "name@gmail.com",
+  "password": "FeKw08M4keuw8e9gnsQZQgwg4yDOlMZfvIwzEkSOsiU=",
+  "confirmPassword": "FeKw08M4keuw8e9gnsQZQgwg4yDOlMZfvIwzEkSOsiU=",
+  "termsAndConditions": true,
+  "profilePicture": "defaultProfile001.png",
+  "joinDate": "2024-05-09",
+  "isAdmin": false,
+  "_class": "com.gamescout.backend.model.User"
+},
+{
+  "_id": {
+    "$oid": "663decdea9f17873983b32e0"
+  },
+  "firstName": "Shan",
+  "lastName": "Silva",
+  "email": "shan@example.com",
+  "password": "FeKw08M4keuw8e9gnsQZQgwg4yDOlMZfvIwzEkSOsiU=",
+  "confirmPassword": "FeKw08M4keuw8e9gnsQZQgwg4yDOlMZfvIwzEkSOsiU=",
+  "termsAndConditions": true,
+  "profilePicture": "defaultProfile001.png",
+  "joinDate": "2024-05-10",
+  "isAdmin": false,
+  "_class": "com.gamescout.backend.model.User"
+},
+{
+  "_id": {
+    "$oid": "663decfba9f17873983b32e1"
+  },
+  "firstName": "User",
+  "lastName": "Two",
+  "email": "ut@example.com",
+  "password": "FeKw08M4keuw8e9gnsQZQgwg4yDOlMZfvIwzEkSOsiU=",
+  "confirmPassword": "FeKw08M4keuw8e9gnsQZQgwg4yDOlMZfvIwzEkSOsiU=",
+  "termsAndConditions": true,
+  "profilePicture": "defaultProfile001.png",
+  "joinDate": "2024-05-10",
+  "isAdmin": false,
+  "_class": "com.gamescout.backend.model.User"
+}]

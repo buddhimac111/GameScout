@@ -1,0 +1,52 @@
+[{
+  "_id": {
+    "$oid": "663e1eb07d676421fd0783b8"
+  },
+  "userId": "663bab2206353d306c799982",
+  "gameTitle": "blazing sails",
+  "steamPrice": "$6.99",
+  "epicPrice": "$9.99",
+  "description": "view-game",
+  "date": "2024-05-10",
+  "time": "18:48:40.800917600",
+  "_class": "com.gamescout.backend.model.MetaRecord"
+},
+{
+  "_id": {
+    "$oid": "663e1eb07d676421fd0783b7"
+  },
+  "userId": "663bab2206353d306c799982",
+  "gameTitle": "blazing sails",
+  "steamPrice": "$6.99",
+  "epicPrice": "$9.99",
+  "description": "view-game",
+  "date": "2024-05-10",
+  "time": "18:48:40.800917600",
+  "_class": "com.gamescout.backend.model.MetaRecord"
+},
+{
+  "_id": {
+    "$oid": "663e2a787d676421fd0783ba"
+  },
+  "userId": "663decfba9f17873983b32e1",
+  "gameTitle": "rimworld",
+  "steamPrice": "$12.99",
+  "epicPrice": "$15.99",
+  "description": "view-game",
+  "date": "2024-05-10",
+  "time": "19:38:56.775760400",
+  "_class": "com.gamescout.backend.model.MetaRecord"
+},
+{
+  "_id": {
+    "$oid": "663e2a787d676421fd0783b9"
+  },
+  "userId": "663decfba9f17873983b32e1",
+  "gameTitle": "rimworld",
+  "steamPrice": "$12.99",
+  "epicPrice": "$15.99",
+  "description": "view-game",
+  "date": "2024-05-10",
+  "time": "19:38:56.775760400",
+  "_class": "com.gamescout.backend.model.MetaRecord"
+}]

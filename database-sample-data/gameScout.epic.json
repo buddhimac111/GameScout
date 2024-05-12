@@ -1,0 +1,165 @@
+[{
+  "_id": {
+    "$oid": "662cc148321e635414c49ebf"
+  },
+  "title": "Alan Wake",
+  "discount": "N/A",
+  "epic_rating": "4.5",
+  "final_price": "$6.99",
+  "original_price": "N/A",
+  "scrapeTitle": "alan wake"
+},
+{
+  "_id": {
+    "$oid": "662cc148321e635414c49ec1"
+  },
+  "title": "Sifu",
+  "discount": "N/A",
+  "epic_rating": "4.8",
+  "final_price": "$18.99",
+  "original_price": "N/A",
+  "scrapeTitle": "sifu"
+},
+{
+  "_id": {
+    "$oid": "662cc148321e635414c49ec3"
+  },
+  "title": "Saints Row",
+  "discount": "N/A",
+  "epic_rating": "3.9",
+  "final_price": "$22.99",
+  "original_price": "N/A",
+  "scrapeTitle": "saints row"
+},
+{
+  "_id": {
+    "$oid": "662cc148321e635414c49ec5"
+  },
+  "title": "Inside",
+  "discount": "N/A",
+  "epic_rating": "4.7",
+  "final_price": "$9.29",
+  "original_price": "N/A",
+  "scrapeTitle": "inside"
+},
+{
+  "_id": {
+    "$oid": "662cc148321e635414c49ec7"
+  },
+  "title": "Need for Speed Unbound",
+  "discount": "N/A",
+  "epic_rating": "N/A",
+  "final_price": "$69.99",
+  "original_price": "N/A",
+  "scrapeTitle": "need for speed unbound"
+},
+{
+  "_id": {
+    "$oid": "662cc148321e635414c49ec9"
+  },
+  "title": "Blazing Sails",
+  "discount": "N/A",
+  "epic_rating": "4.0",
+  "final_price": "$9.99",
+  "original_price": "N/A",
+  "scrapeTitle": "blazing sails"
+},
+{
+  "_id": {
+    "$oid": "662cc148321e635414c49ecb"
+  },
+  "title": "RimWorld",
+  "discount": "N/A",
+  "epic_rating": "4.9",
+  "final_price": "$15.99",
+  "original_price": "N/A",
+  "scrapeTitle": "rimworld"
+},
+{
+  "_id": {
+    "$oid": "662cc148321e635414c49ecd"
+  },
+  "title": "Dead by Daylight",
+  "discount": "N/A",
+  "epic_rating": "4.5",
+  "final_price": "$9.99",
+  "original_price": "N/A",
+  "scrapeTitle": "dead by daylight"
+},
+{
+  "_id": {
+    "$oid": "662cc148321e635414c49ecf"
+  },
+  "title": "Sherlock Holmes Chapter One",
+  "discount": "N/A",
+  "epic_rating": "4.5",
+  "final_price": "$29.99",
+  "original_price": "N/A",
+  "scrapeTitle": "sherlock holmes chapter one"
+},
+{
+  "_id": {
+    "$oid": "662cc148321e635414c49ed1"
+  },
+  "title": "The Settlers New Allies",
+  "discount": "N/A",
+  "epic_rating": "3.9",
+  "final_price": "$59.99",
+  "original_price": "N/A",
+  "scrapeTitle": "the settlers"
+},
+{
+  "_id": {
+    "$oid": "662cc148321e635414c49ed3"
+  },
+  "title": "Age Of Wonders 4",
+  "discount": "N/A",
+  "epic_rating": "4.7",
+  "final_price": "$23.29",
+  "original_price": "N/A",
+  "scrapeTitle": "age of wonders 4"
+},
+{
+  "_id": {
+    "$oid": "662cc148321e635414c49ed5"
+  },
+  "title": "Fallout 4",
+  "discount": "-40%",
+  "epic_rating": "4.5",
+  "final_price": "$7.79",
+  "original_price": "$12.99",
+  "scrapeTitle": "fallout 4"
+},
+{
+  "_id": {
+    "$oid": "662cc148321e635414c49ed7"
+  },
+  "title": "Alien Isolation",
+  "discount": "-80%",
+  "epic_rating": "4.6",
+  "final_price": "$7.99",
+  "original_price": "$39.99",
+  "scrapeTitle": "alien isolation"
+},
+{
+  "_id": {
+    "$oid": "662cc148321e635414c49ed9"
+  },
+  "title": "Red Dead Redemption 2",
+  "discount": "N/A",
+  "epic_rating": "4.9",
+  "final_price": "$59.99",
+  "original_price": "N/A",
+  "scrapeTitle": "red dead redemption 2"
+},
+{
+  "_id": {
+    "$oid": "662cc148321e635414c49edb"
+  },
+  "title": "Grand Theft Auto V",
+  "discount": "N/A",
+  "epic_rating": "4.7",
+  "final_price": "$29.99",
+  "original_price": "N/A",
+  "scrapeTitle": "grand theft auto v"
+}]
