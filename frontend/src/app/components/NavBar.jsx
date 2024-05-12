@@ -99,6 +99,26 @@ export default function NavBar() {
                   ) : (
                     <></>
                   )}
+                  {token && ready ? (
+                  <Link
+                    href={`/contact-us`}
+                    className={
+                      pathName.startsWith('/contact-us')
+                        ? activeClass
+                        : inActiveClass
+                    }
+                  >
+                    Contact us 
+                  </Link>
+                  ) : (
+                    <></>
+                  )}
+                  <Link
+                    href='/about-us'
+                    className={pathName === "/about-us" ? activeClass : inActiveClass}
+                  >
+                    About us
+                  </Link>
                 </div>
               </div>
               <Search />
