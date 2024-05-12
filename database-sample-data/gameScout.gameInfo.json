@@ -1,0 +1,240 @@
+[{
+  "_id": {
+    "$oid": "662e96b6c0891f5e1adb718d"
+  },
+  "title": "Alan Wake",
+  "scrapeTitle": "alan wake",
+  "developer": "Remedy Entertainment",
+  "publisher": "Remedy Entertainment",
+  "genres": [
+    "action",
+    "horror",
+    "shooter"
+  ],
+  "description": "When the wife of the best-selling writer Alan Wake disappears on their vacation, his search turns up pages from a thriller he doesn’t even remember writing. A Dark Presence stalks the small town of Bright Falls, pushing Wake to the brink of sanity in his fight to unravel the mystery and save his love.",
+  "wallpaper": "fcfd1f63-c590-4f77-aa96-a94f1b802221.jpg",
+  "_class": "com.gamescout.backend.model.GameInfo"
+},
+{
+  "_id": {
+    "$oid": "662e97e6c0891f5e1adb718f"
+  },
+  "title": "Sifu",
+  "scrapeTitle": "sifu",
+  "developer": "Sloclap",
+  "publisher": "Sloclap",
+  "genres": [
+    "action"
+  ],
+  "description": "Sifu is a realistic third-person brawler with tight Kung Fu combat mechanics and cinematic martial arts action embarking you on a path for revenge.",
+  "wallpaper": "79c1d8ea-75a7-4c8d-a9e1-e1b6c8b0ff18.jpg",
+  "_class": "com.gamescout.backend.model.GameInfo"
+},
+{
+  "_id": {
+    "$oid": "662e987bc0891f5e1adb7190"
+  },
+  "title": "Saints Row",
+  "scrapeTitle": "saints row",
+  "developer": "Deep Silver Volition",
+  "publisher": "Deep Silver",
+  "genres": [
+    "action",
+    "adventure",
+    "open-world",
+    "shooter"
+  ],
+  "description": "Welcome to Santo Ileso, a vibrant fictional city in the American Southwest. In a world rife with crime, a group of young friends embark on their own criminal venture, as they rise to the top in their bid to become Self Made.",
+  "wallpaper": "a3eacfd3-401f-4088-8017-be226fcf76f1.jpg",
+  "_class": "com.gamescout.backend.model.GameInfo"
+},
+{
+  "_id": {
+    "$oid": "662e98edc0891f5e1adb7191"
+  },
+  "title": "INSIDE",
+  "scrapeTitle": "inside",
+  "developer": "Playdead",
+  "publisher": "Playdead",
+  "genres": [
+    "adventure"
+  ],
+  "description": "Hunted and alone, a boy finds himself drawn to the center of a dark project.",
+  "wallpaper": "0600bb68-af6f-45b2-8fee-5e7cb62f285e.jpg",
+  "_class": "com.gamescout.backend.model.GameInfo"
+},
+{
+  "_id": {
+    "$oid": "662e995cc0891f5e1adb7192"
+  },
+  "title": "Need for Speed™ Unbound",
+  "scrapeTitle": "need for speed unbound",
+  "developer": "Criterion Games",
+  "publisher": "Electronic Arts",
+  "genres": [
+    "action",
+    "racing"
+  ],
+  "description": "Jump straight into the competition in Vol. 6 with a new dedicated PVP mode featuring weekly playlists, crush your rivals with the introduction of 3 fully customizable Audi cars with unique modifications, and more.",
+  "wallpaper": "d0cc0688-ca4c-4962-a1f7-cb94dc192cd4.jpg",
+  "_class": "com.gamescout.backend.model.GameInfo"
+},
+{
+  "_id": {
+    "$oid": "662e99b8c0891f5e1adb7193"
+  },
+  "title": "Blazing Sails",
+  "scrapeTitle": "blazing sails",
+  "developer": "Get Up Games",
+  "publisher": "Iceberg Interactive",
+  "genres": [
+    "action"
+  ],
+  "description": "Create your own unique pirate and ship. Band together with other players to command your mighty vessel! Explore different game-modes, maps, weapons, ship types and more while eliminating other crews in epic battles on land and sea!",
+  "wallpaper": "7a86601a-bbaf-491e-9687-7bde0e37e8a5.jpg",
+  "_class": "com.gamescout.backend.model.GameInfo"
+},
+{
+  "_id": {
+    "$oid": "662e9a1fc0891f5e1adb7194"
+  },
+  "title": "RimWorld",
+  "scrapeTitle": "rimworld",
+  "developer": "Ludeon Studios",
+  "publisher": "Ludeon Studios",
+  "genres": [
+    "adventure",
+    "survival"
+  ],
+  "description": "RimWorld is a sci-fi colony sim driven by an intelligent AI storyteller. Inspired by Dwarf Fortress, Firefly, and Dune. It’s designed to co-author tragic, twisted, and triumphant stories about imprisoned pirates, desperate colonists, starvation and survival.",
+  "wallpaper": "ff5d2075-89d5-4549-aaee-b427c94d8b18.jpg",
+  "_class": "com.gamescout.backend.model.GameInfo"
+},
+{
+  "_id": {
+    "$oid": "662e9a89c0891f5e1adb7195"
+  },
+  "title": "Dead by Daylight",
+  "scrapeTitle": "dead by daylight",
+  "developer": "Behaviour Interactive",
+  "publisher": "Behaviour Interactive",
+  "genres": [
+    "survival",
+    "action"
+  ],
+  "description": "Dead by Daylight is a multiplayer (4vs1) horror game where one player takes on the role of the savage Killer, and the other four players play as Survivors, trying to escape the Killer and avoid being caught and killed.",
+  "wallpaper": "78da2a87-1c94-4b2c-ab15-930715347ceb.jpeg",
+  "_class": "com.gamescout.backend.model.GameInfo"
+},
+{
+  "_id": {
+    "$oid": "662e9bec6f6f9816eda0289c"
+  },
+  "title": "Sherlock Holmes: Chapter 1",
+  "scrapeTitle": "sherlock holmes chapter one",
+  "developer": "Frogwares",
+  "publisher": "Frogwares",
+  "genres": [
+    "action",
+    "adventure"
+  ],
+  "description": "In this story-driven detective thriller, a young Sherlock Holmes struggles to prove himself as he navigates an exotic, dangerous island in the Mediterranean to investigate the mystery of his mother’s death.",
+  "wallpaper": "45d67282-b1dc-4226-a3ee-bc7d7b234566.png",
+  "_class": "com.gamescout.backend.model.GameInfo"
+},
+{
+  "_id": {
+    "$oid": "662e9d2b6f6f9816eda0289d"
+  },
+  "title": "The Settlers®: New Allies",
+  "scrapeTitle": "the settlers",
+  "developer": "Ubisoft Düsseldorf",
+  "publisher": "Ubisoft",
+  "genres": [
+    "survival"
+  ],
+  "description": "The Settlers®: New Allies is a strategy game with an in-depth build-up experience and real-time strategic battles.",
+  "wallpaper": "fbe6e4dc-9bba-4d8c-875c-66bf702c7a88.jpg",
+  "_class": "com.gamescout.backend.model.GameInfo"
+},
+{
+  "_id": {
+    "$oid": "662e9d896f6f9816eda0289e"
+  },
+  "title": "Age Of Wonders 4",
+  "scrapeTitle": "age of wonders 4",
+  "developer": "Triumph Studios",
+  "publisher": "Paradox Interactive",
+  "genres": [
+    "action",
+    "adventure"
+  ],
+  "description": "Rule a fantasy realm of your own design! Explore new magical realms in Age of Wonders’ signature blend of 4X strategy and turn-based tactical combat. Control a faction that grows and changes as you expand your empire with each turn!",
+  "wallpaper": "fa541982-e011-42a8-9dc2-d8037dcb1d82.jpg",
+  "_class": "com.gamescout.backend.model.GameInfo"
+},
+{
+  "_id": {
+    "$oid": "662e9e0a6f6f9816eda0289f"
+  },
+  "title": "Fallout 4",
+  "scrapeTitle": "fallout 4",
+  "developer": "Bethesda Game Studios",
+  "publisher": "Bethesda Softworks",
+  "genres": [
+    "rpg",
+    "open-world"
+  ],
+  "description": "As the sole survivor of Vault 111, do whatever you want in a massive open world Commonwealth with hundreds of locations, characters and quests. Welcome home to Fallout 4, from Bethesda Game Studios, the award-winning creators of The Elder Scrolls V: Skyrim.",
+  "wallpaper": "937de0ce-6fcf-4ab7-9027-bd10274c0ef3.jpg",
+  "_class": "com.gamescout.backend.model.GameInfo"
+},
+{
+  "_id": {
+    "$oid": "662e9e8a6f6f9816eda028a0"
+  },
+  "title": "Alien: Isolation",
+  "scrapeTitle": "alien isolation",
+  "developer": "Creative Assembly",
+  "publisher": "SEGA",
+  "genres": [
+    "action"
+  ],
+  "description": "When she left Earth, Ellen Ripley promised her daughter she would return home to celebrate her 11th birthday. She never made it. Fifteen years later, Amanda Ripley learns that the flight recorder from her mother's ship has been recovered. Amanda enters Sevastopol space station to finally solve the mystery of her mother's disappearance, only to confront an unknown menace.",
+  "wallpaper": "e9a15d94-61e1-495b-9818-3681d1798bce.jpg",
+  "_class": "com.gamescout.backend.model.GameInfo"
+},
+{
+  "_id": {
+    "$oid": "662e9ee46f6f9816eda028a1"
+  },
+  "title": "Red Dead Redemption 2",
+  "scrapeTitle": "red dead redemption 2",
+  "developer": "Rockstar Games",
+  "publisher": "Rockstar Games",
+  "genres": [
+    "action",
+    "adventure",
+    "open-world",
+    "shooter"
+  ],
+  "description": "Winner of over 175 Game of the Year Awards and recipient of over 250 perfect scores, Red Dead Redemption 2 is an epic tale of honor and loyalty at the dawn of the modern age. Includes Red Dead Redemption 2: Story Mode and Red Dead Online.",
+  "wallpaper": "af620d80-c42e-4062-9a97-981744d0b351.jpg",
+  "_class": "com.gamescout.backend.model.GameInfo"
+},
+{
+  "_id": {
+    "$oid": "662e9f5f6f6f9816eda028a2"
+  },
+  "title": "Grand Theft Auto V",
+  "scrapeTitle": "grand theft auto v",
+  "developer": "Rockstar Games",
+  "publisher": "Rockstar Games",
+  "genres": [
+    "action",
+    "adventure"
+  ],
+  "description": "When a young street hustler, a retired bank robber and a terrifying psychopath land themselves in trouble, they must pull off a series of dangerous heists to survive in a city in which they can trust nobody, least of all each other.",
+  "wallpaper": "f9d80d2e-fb3a-40b6-b23d-3499bc9e921a.jpg",
+  "_class": "com.gamescout.backend.model.GameInfo"
+}]

@@ -1,0 +1,180 @@
+[{
+  "_id": {
+    "$oid": "662cbfd5321e635414c49db8"
+  },
+  "title": "Alan Wake",
+  "discount": "N/A",
+  "final_price": "$6.99",
+  "original_price": "N/A",
+  "release_date": "16 Feb 2012",
+  "steam_rating": "Very Positive<br>90% of the 32,658 user reviews for this game are positive.",
+  "scrapeTitle": "alan wake"
+},
+{
+  "_id": {
+    "$oid": "662cbfd5321e635414c49dba"
+  },
+  "title": "Sifu",
+  "discount": "N/A",
+  "final_price": "$15.99",
+  "original_price": "N/A",
+  "release_date": "28 Mar 2023",
+  "steam_rating": "Very Positive<br>92% of the 9,555 user reviews for this game are positive.",
+  "scrapeTitle": "sifu"
+},
+{
+  "_id": {
+    "$oid": "662cbfd5321e635414c49dbc"
+  },
+  "title": "Saints Row",
+  "discount": "N/A",
+  "final_price": "$22.99",
+  "original_price": "N/A",
+  "release_date": "24 Aug 2023",
+  "steam_rating": "Mixed<br>63% of the 3,171 user reviews for this game are positive.",
+  "scrapeTitle": "saints row"
+},
+{
+  "_id": {
+    "$oid": "662cbfd5321e635414c49dbe"
+  },
+  "title": "INSIDE",
+  "discount": "N/A",
+  "final_price": "$8.19",
+  "original_price": "N/A",
+  "release_date": "7 Jul 2016",
+  "steam_rating": "Overwhelmingly Positive<br>96% of the 52,349 user reviews for this game are positive.",
+  "scrapeTitle": "inside"
+},
+{
+  "_id": {
+    "$oid": "662cbfd5321e635414c49dc0"
+  },
+  "title": "Need for Speed Unbound",
+  "discount": "-86%",
+  "final_price": "$9.79",
+  "original_price": "$69.99",
+  "release_date": "1 Dec 2022",
+  "steam_rating": "Mixed<br>62% of the 25,291 user reviews for this game are positive.",
+  "scrapeTitle": "need for speed unbound"
+},
+{
+  "_id": {
+    "$oid": "662cbfd5321e635414c49dc2"
+  },
+  "title": "Blazing Sails",
+  "discount": "N/A",
+  "final_price": "$6.99",
+  "original_price": "N/A",
+  "release_date": "13 Nov 2023",
+  "steam_rating": "Very Positive<br>88% of the 6,633 user reviews for this game are positive.",
+  "scrapeTitle": "blazing sails"
+},
+{
+  "_id": {
+    "$oid": "662cbfd5321e635414c49dc4"
+  },
+  "title": "RimWorld",
+  "discount": "N/A",
+  "final_price": "$12.99",
+  "original_price": "N/A",
+  "release_date": "17 Oct 2018",
+  "steam_rating": "Overwhelmingly Positive<br>98% of the 156,177 user reviews for this game are positive.",
+  "scrapeTitle": "rimworld"
+},
+{
+  "_id": {
+    "$oid": "662cbfd5321e635414c49dc6"
+  },
+  "title": "Dead by Daylight",
+  "discount": "-60%",
+  "final_price": "$3.99",
+  "original_price": "$9.99",
+  "release_date": "14 Jun 2016",
+  "steam_rating": "Very Positive<br>80% of the 520,634 user reviews for this game are positive.",
+  "scrapeTitle": "dead by daylight"
+},
+{
+  "_id": {
+    "$oid": "662cbfd5321e635414c49dc8"
+  },
+  "title": "Sherlock Holmes Chapter One",
+  "discount": "N/A",
+  "final_price": "$29.99",
+  "original_price": "N/A",
+  "release_date": "15 Nov 2021",
+  "steam_rating": "Mostly Positive<br>78% of the 2,696 user reviews for this game are positive.",
+  "scrapeTitle": "sherlock holmes chapter one"
+},
+{
+  "_id": {
+    "$oid": "662cbfd5321e635414c49dca"
+  },
+  "title": "The Settlers New Allies",
+  "discount": "N/A",
+  "final_price": "$43.99",
+  "original_price": "N/A",
+  "release_date": "26 Mar 2024",
+  "steam_rating": "Mixed<br>50% of the 275 user reviews for this game are positive.",
+  "scrapeTitle": "the settlers"
+},
+{
+  "_id": {
+    "$oid": "662cbfd5321e635414c49dcc"
+  },
+  "title": "Age of Wonders 4",
+  "discount": "N/A",
+  "final_price": "$36.49",
+  "original_price": "N/A",
+  "release_date": "2 May 2023",
+  "steam_rating": "Very Positive<br>81% of the 10,144 user reviews for this game are positive.",
+  "scrapeTitle": "age of wonders 4"
+},
+{
+  "_id": {
+    "$oid": "662cbfd5321e635414c49dce"
+  },
+  "title": "Fallout 4",
+  "discount": "N/A",
+  "final_price": "$12.99",
+  "original_price": "N/A",
+  "release_date": "9 Nov 2015",
+  "steam_rating": "Very Positive<br>83% of the 230,411 user reviews for this game are positive.",
+  "scrapeTitle": "fallout 4"
+},
+{
+  "_id": {
+    "$oid": "662cbfd5321e635414c49dd0"
+  },
+  "title": "Alien Isolation",
+  "discount": "-80%",
+  "final_price": "$7.99",
+  "original_price": "$39.99",
+  "release_date": "6 Oct 2014",
+  "steam_rating": "Very Positive<br>92% of the 39,089 user reviews for this game are positive.",
+  "scrapeTitle": "alien isolation"
+},
+{
+  "_id": {
+    "$oid": "662cbfd5321e635414c49dd2"
+  },
+  "title": "Red Dead Redemption 2",
+  "discount": "N/A",
+  "final_price": "$44.99",
+  "original_price": "N/A",
+  "release_date": "5 Dec 2019",
+  "steam_rating": "Very Positive<br>91% of the 521,143 user reviews for this game are positive.",
+  "scrapeTitle": "red dead redemption 2"
+},
+{
+  "_id": {
+    "$oid": "662cbfd5321e635414c49dd4"
+  },
+  "title": "Grand Theft Auto V",
+  "discount": "-25%",
+  "final_price": "$20.61",
+  "original_price": "$27.48",
+  "release_date": "13 Apr 2015",
+  "steam_rating": "Very Positive<br>87% of the 1,629,573 user reviews for this game are positive.",
+  "scrapeTitle": "grand theft auto v"
+}]
