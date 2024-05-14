@@ -11,4 +11,5 @@ public interface EpicGameRepo extends MongoRepository<EpicGame, String>{
     List<EpicGame> findByScrapeTitle(String scrapeTitle);
 
     List<EpicGame> findAllByScrapeTitleIn(List<String> recommendedGames);
+    void deleteByScrapeTitle(String scrapeTitle);
 }

@@ -7,6 +7,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { FaUserCog } from "react-icons/fa";
+import Cookies from "js-cookie";
+import Swal from "sweetalert2";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -22,6 +24,23 @@ export default function NavAdmin() {
     "block border-l-4 border-indigo-500 bg-indigo-50 py-2 pl-3 pr-4 text-base font-medium text-indigo-700";
   const inActiveMobileClass =
     "block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-600 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-800";
+
+  function handleSignOut() {
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You are about to sign out from admin account!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#d33",
+      cancelButtonColor: "#3085d6",
+      confirmButtonText: "Sign out",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Cookies.remove("token");
+        window.location.href = "/";
+      }
+    });
+  }
 
   return (
     <Disclosure
@@ -66,10 +85,22 @@ export default function NavAdmin() {
                   <Link
                     href='/admin/games'
                     className={
-                      pathName.startsWith("/admin/games") ? activeClass : inActiveClass
+                      pathName.startsWith("/admin/games")
+                        ? activeClass
+                        : inActiveClass
                     }
                   >
                     Games
+                  </Link>
+                  <Link
+                    href='/admin/promotions'
+                    className={
+                      pathName.startsWith("/admin/promotions")
+                        ? activeClass
+                        : inActiveClass
+                    }
+                  >
+                    Promotions
                   </Link>
                 </div>
               </div>
@@ -114,6 +145,7 @@ export default function NavAdmin() {
                               active ? "bg-gray-100" : "",
                               "block px-4 py-2 text-sm text-gray-700"
                             )}
+                            onClick={handleSignOut}
                           >
                             Sign out
                           </a>
