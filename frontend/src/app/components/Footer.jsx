@@ -30,8 +30,7 @@ export default function FooterSection() {
           />
           <FooterLinkGroup className="text-adminGrey">
             <FooterLink href='/'>Home</FooterLink>
-            <FooterLink href='#'>About us</FooterLink>
-            <FooterLink href='#'>Contact us</FooterLink>
+            <FooterLink href='/about-us'>About us</FooterLink>
           </FooterLinkGroup>
         </div>
       </div>
