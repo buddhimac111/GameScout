@@ -60,6 +60,11 @@ public class GameController {
         return gameService.searchGames(searchTerm);
     }
 
+    @DeleteMapping("/delete-game")
+    public ResponseEntity<String> deleteGame(@RequestParam("scrapeTitle") String scrapeTitle) {
+        return gameService.deleteGame(scrapeTitle);
+    }
+
     @PostMapping(value = "/add-game-info", consumes = "multipart/form-data")
     public ResponseEntity<String> addGameInfo(
             @RequestParam("wallpaper") MultipartFile wallpaper,

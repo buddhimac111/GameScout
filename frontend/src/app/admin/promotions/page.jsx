@@ -15,18 +15,18 @@ import {
 import axios from "axios";
 import Swal from "sweetalert2";
 
-export default function Games() {
+export default function Promotions() {
   const [searchQuery, setSearchQuery] = useState("");
   const [games, setGames] = useState([]);
   useEffect(() => {
     const fetchProducts = async () => {
       try {
         const response = await axios.get(
-          `${process.env.NEXT_PUBLIC_API_URL}/scraped-games/get-game-info-all`
+          `${process.env.NEXT_PUBLIC_API_URL}/promotions/get-promotion-sliders-all`
         );
         setGames(response.data); // Assuming the API returns an array of products
       } catch (error) {
-        console.error("Failed to fetch products:", error);
+        console.error("Failed to fetch sliders:", error);
       }
     };
 
@@ -37,10 +37,10 @@ export default function Games() {
     games.title.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
-  function deleteProfile(title, scrapeTitle) {
+  function deleteProfile(id,title) {
     Swal.fire({
       title: `Are you sure you want to delete ${title}`,
-      text: "You won't be able to revert this and all the data related to this game will be lost!",
+      text: "You won't be able to revert this agin!",
       showCancelButton: true,
       confirmButtonColor: "#d33",
       cancelButtonColor: "#3085d6",
@@ -53,18 +53,18 @@ export default function Games() {
       backdrop: `rgba(255, 0, 0, 0.3)`,
     }).then((result) => {
       if (result.isConfirmed) {
-        console.log("Delete profile");
+        console.log("Delete slider");
         try {
           axios.delete(
-            `${process.env.NEXT_PUBLIC_API_URL}/scraped-games/delete-game?scrapeTitle=${scrapeTitle}`
+            `${process.env.NEXT_PUBLIC_API_URL}/promotions/delete-promotion-slider?id=${id}`
           );
           Swal.fire({
             title: "Deleted!",
-            text: "Your profile has been deleted.",
+            text: "Promotion slider has been deleted successfully!.",
             icon: "success",
           }).then((result) => {
             if (result.value) {
-              window.location.href = "/admin/games";
+              window.location.href = "/admin/promotions";
             }
           });
         } catch (error) {
@@ -90,45 +90,36 @@ export default function Games() {
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
           />
-          <Link href='/admin/games/add-game'>
-            <Button color='success'>Add New Game</Button>
+          <Link href='/admin/promotions/add-slider'>
+            <Button color='success'>Add New Promotion Slider</Button>
           </Link>
         </div>
         <Table hoverable>
           <TableHead>
             <TableHeadCell>Title</TableHeadCell>
-            <TableHeadCell>Developer</TableHeadCell>
-            <TableHeadCell>Publisher</TableHeadCell>
-            <TableHeadCell>Genres</TableHeadCell>
-            <TableHeadCell>
-              <span className='sr-only'>Edit</span>
-            </TableHeadCell>
+            <TableHeadCell>description</TableHeadCell>
           </TableHead>
           <TableBody className='divide-y'>
-            {filteredProducts.map((games, index) => (
+            {filteredProducts.map((slider, index) => (
               <TableRow
                 key={index}
                 className='bg-gray-800 border-gray-600 text-adminGrey hover:bg-gray-600'
               >
-                <TableCell>{games.title}</TableCell>
-                <TableCell>{games.developer}</TableCell>
-                <TableCell>{games.publisher}</TableCell>
-                <TableCell className='capitalize'>
-                  {games.genres.join(" , ")}
-                </TableCell>
+                <TableCell>{slider.title}</TableCell>
+                <TableCell>{slider.description}</TableCell>
 
                 <TableCell className='space-x-5'>
-                  <Link
-                    href={`/admin/games/edit-game/${games.scrapeTitle}`}
-                    className='font-medium text-cyan-500 hover:underline'
+                <a
+                    href={`${process.env.NEXT_PUBLIC_SERVER_URL}/sliders/${slider.sliderImage}`}
+                    className='font-medium text-yellow-400 hover:underline'
                   >
-                    Edit
-                  </Link>
+                    View
+                  </a>
                   <Link
                     href='#'
                     className='font-medium text-red-500 hover:underline'
                     onClick={() =>
-                      deleteProfile(games.title, games.scrapeTitle)
+                      deleteProfile(slider._id, slider.title)
                     }
                   >
                     Delete

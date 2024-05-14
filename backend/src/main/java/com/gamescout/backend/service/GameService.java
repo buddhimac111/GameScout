@@ -9,6 +9,7 @@ import com.gamescout.backend.repo.SteamGameRepo;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -49,6 +50,13 @@ public class GameService {
         PageRequest pageRequest = PageRequest.of(0, 5);
         Page<GameInfo> page = gameInfoRepo.findByTitleContainingIgnoreCase(searchTerm, pageRequest);
         return page.getContent();
+    }
+
+    public ResponseEntity<String> deleteGame(String scrapeTitle) {
+        gameInfoRepo.deleteByScrapeTitle(scrapeTitle);
+        epicGameRepo.deleteByScrapeTitle(scrapeTitle);
+        steamGameRepo.deleteByScrapeTitle(scrapeTitle);
+        return ResponseEntity.ok("Game deleted successfully");
     }
 
     public String addGameInfo(GameInfo gameInfo) {
