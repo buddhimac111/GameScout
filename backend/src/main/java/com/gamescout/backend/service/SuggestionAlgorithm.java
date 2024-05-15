@@ -24,9 +24,10 @@ public class SuggestionAlgorithm {
 //        get games based on that meta records
         List<GameInfo> gameInfoList = gameInfoRepo.findByScrapeTitle(FilteredGames.get(0).getGameTitle());
 
-//        get 9 games from the list with similar genres
+//       get  games from the list with similar genres
         List<GameInfo> recommendedGames = gameInfoRepo.findAllByGenresContainingIgnoreCase(gameInfoList.get(0).getGenres());
 
+//return the list of recommended games with their scrape title
         return recommendedGames.stream()
                 .map(GameInfo::getScrapeTitle)
                 .collect(Collectors.toList());

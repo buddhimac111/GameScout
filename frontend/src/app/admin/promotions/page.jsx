@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import NavAdmin from "@/app/components/NavAdmin";
+import Cookies from "js-cookie";
 import {
   Table,
   TableBody,
@@ -16,8 +17,19 @@ import axios from "axios";
 import Swal from "sweetalert2";
 
 export default function Promotions() {
+    // check admin
+    useEffect(() => {
+      const token = Cookies.get("token");
+      if (token && token.split("-")[1] === "true") {
+        setLoading(true);
+      } else {
+        window.location.href = "/";
+      }
+    }, []);
+
   const [searchQuery, setSearchQuery] = useState("");
   const [games, setGames] = useState([]);
+  const [loading, setLoading] = useState(false);
   useEffect(() => {
     const fetchProducts = async () => {
       try {
@@ -79,6 +91,7 @@ export default function Promotions() {
   }
 
   return (
+    loading && (
     <main>
       <NavAdmin />
       <div className='overflow-x-auto pt-24 md:px-20 px-12'>
@@ -96,7 +109,7 @@ export default function Promotions() {
         </div>
         <Table hoverable>
           <TableHead>
-            <TableHeadCell>Title</TableHeadCell>
+            <TableHeadCell>Unique Title</TableHeadCell>
             <TableHeadCell>description</TableHeadCell>
           </TableHead>
           <TableBody className='divide-y'>
@@ -131,5 +144,6 @@ export default function Promotions() {
         </Table>
       </div>
     </main>
+    )
   );
 }

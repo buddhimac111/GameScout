@@ -37,6 +37,7 @@ public class SuggestionService {
 
         List<String> recommendedGames = suggestionAlgorithm.RecommendedGames(userId);
 
+//        find games in data in collections
         List<SteamGame> steamGameList = steamGameRepo.findAllByScrapeTitleIn(recommendedGames);
         List<EpicGame> epicGameList = epicGameRepo.findAllByScrapeTitleIn(recommendedGames);
         List<GameInfo> gameInfoList = gameInfoRepo.findAllByScrapeTitleIn(recommendedGames);
