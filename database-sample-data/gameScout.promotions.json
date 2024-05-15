@@ -1,0 +1,36 @@
+[{
+  "_id": {
+    "$oid": "6642eb327871b62fd20d418d"
+  },
+  "title": "alien-isolation-offer",
+  "description": "The Epic Store and Steam Store are offering an 80% discount on \"Alien: Isolation\" until the end of July.",
+  "sliderImage": "1086a546-1b5a-4270-8ba9-ae7eb42e803e.png",
+  "_class": "com.gamescout.backend.model.Promotion"
+},
+{
+  "_id": {
+    "$oid": "6642efaa7871b62fd20d418f"
+  },
+  "title": "nfs-unbound-promo",
+  "description": "The Steam Store is offering an 86% discount on Need for Speed: Unbound.",
+  "sliderImage": "245a6975-aeae-47bc-ae28-578c6a4c5b30.png",
+  "_class": "com.gamescout.backend.model.Promotion"
+},
+{
+  "_id": {
+    "$oid": "6642f2623dd45f12ef431c72"
+  },
+  "title": "sifu-available-now",
+  "description": "\"Sifu,\" the martial arts-based video game, is now available on both the Epic and Steam stores.",
+  "sliderImage": "719ac84e-c444-4dc9-9631-f1f2d5cf4b9c.png",
+  "_class": "com.gamescout.backend.model.Promotion"
+},
+{
+  "_id": {
+    "$oid": "6644252db9274946d856e6c9"
+  },
+  "title": "GTA V Promo",
+  "description": "Now 25 % off on STEAM",
+  "sliderImage": "fc69d418-83c1-4e69-b031-4c9854b52692.png",
+  "_class": "com.gamescout.backend.model.Promotion"
+}]
