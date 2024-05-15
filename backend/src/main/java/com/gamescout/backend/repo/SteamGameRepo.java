@@ -10,5 +10,5 @@ import java.util.List;
 public interface SteamGameRepo extends MongoRepository<SteamGame, String>{
     List<SteamGame> findByScrapeTitle(String scrapeTitle);
     List<SteamGame> findAllByScrapeTitleIn(List<String> recommendedGames);
-    void deleteByScrapeTitle(String scrapeTitle);
+    void deleteByTitleIgnoreCase(String scrapeTitle);
 }
