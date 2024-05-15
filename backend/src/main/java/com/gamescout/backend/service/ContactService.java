@@ -5,6 +5,8 @@ import com.gamescout.backend.repo.ContactRepo;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 @RequiredArgsConstructor
 public class ContactService {
@@ -13,5 +15,9 @@ public class ContactService {
 
     public String saveContactForm(Contact contact) {
         return contactRepo.save(contact).get_id();
+    }
+
+    public List<Contact> getAllContactForms() {
+        return contactRepo.findAll();
     }
 }

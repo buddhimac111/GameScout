@@ -1,0 +1,18 @@
+[{
+  "_id": {
+    "$oid": "6643bbe219350e18f1be9867"
+  },
+  "email": "hello@gmail.com",
+  "subject": "hello",
+  "message": "how updated your game details",
+  "_class": "com.gamescout.backend.model.Contact"
+},
+{
+  "_id": {
+    "$oid": "6643bc1d19350e18f1be9868"
+  },
+  "email": "hi@gmail.com",
+  "subject": "Regarding GTA 6",
+  "message": "Do you guys have any idea when GTA 6 going to release?",
+  "_class": "com.gamescout.backend.model.Contact"
+}]

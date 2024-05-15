@@ -54,8 +54,8 @@ public class GameService {
 
     public ResponseEntity<String> deleteGame(String scrapeTitle) {
         gameInfoRepo.deleteByScrapeTitle(scrapeTitle);
-        epicGameRepo.deleteByScrapeTitle(scrapeTitle);
-        steamGameRepo.deleteByScrapeTitle(scrapeTitle);
+        epicGameRepo.deleteByTitleIgnoreCase(scrapeTitle);
+        steamGameRepo.deleteByTitleIgnoreCase(scrapeTitle);
         return ResponseEntity.ok("Game deleted successfully");
     }
 

@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 
 @RestController
 @RequestMapping("api/contacts")
@@ -18,6 +20,11 @@ public class ContactController {
     @PostMapping("/save-contact-form")
     public ResponseEntity<String> saveContactForm(@RequestBody Contact contact) {
         return ResponseEntity.ok(contactService.saveContactForm(contact));
+    }
+
+    @GetMapping("/get-all-contact-forms")
+    public List<Contact> getAllContactForms() {
+        return contactService.getAllContactForms();
     }
 }
 
