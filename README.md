@@ -1,7 +1,7 @@
 # GameScout
 
 ## Overview
-GameScout is a web-based application project developed using modern technologies and techniques like Next.js, Java 17/Spring Boot, Python, and MongoDB . The primary objective of this project is to provide a platform for gaming enthusiasts to suggest their favorite video games and compare their prices across various online stores, enabling them to buy their favorite games at the best prices with discounts. Additionally, this project aims to reduce the purchase of pirated games, which would be beneficial for the gaming industry. The platform also features a review and admin contact system, allowing gamers to have active contact with system administrators. The GameScout project is managed according to agile methodology. In the future, this project plans to expand its scope, improve the suggestion system, and introduce many more features for video game players as well as publishers.
+GameScout is a web application created with modern technologies such as Next.js, Java 17/Spring Boot, Python, and MongoDB. This project aims to offer gaming enthusiasts a platform where they can recommend their favorite games and compare prices across various online retailers, helping them find the best deals and discounts. By doing so, GameScout also seeks to reduce the purchase of pirated games, benefiting the gaming industry. Additionally, the platform includes a review system and an admin contact feature, allowing gamers to communicate directly with administrators. Managed using agile methodology, the GameScout project plans to expand its features in the future, enhancing the suggestion system and adding new functionalities for both gamers and game publishers.
 
 ## Technology Stack
 - **Next.js 13**
